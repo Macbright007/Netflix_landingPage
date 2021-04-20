@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './images/logo.png';
+import Banner from './Banner.js';
+import Video from './components/Video.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return(
+        <div className="container">
+            <header>
+                <a href="#" className="logo">
+                    <img src={logo} alt="Netflix" />
+                </a>
+                    <ul className="navigation">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">TV Series</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Latest</a></li>
+                        <li><a href="#">My List</a></li>
+                    </ul>
+
+                <div className="search">
+                    <input type="text" placeholder="Search" />
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </header>
+            <Banner />
+            <Video />
+        </div>
+    )
 }
 
-export default App;
+export default App
